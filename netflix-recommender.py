@@ -49,7 +49,7 @@ similarity = cosine_similarity(tfidf_matrix)
 indices = pd.Series(
     data.index, 
     index=data['cleanTitle']).drop_duplicates()
-# print(indices)
+#print(indices)
 #actual recommendation function:
 def netFlix_recommendation(title, similarity = similarity):
     index = indices.get(clean(title))
